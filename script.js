@@ -48,9 +48,36 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
+  let round = 1;
+  let playerPoints = 0;
+  let compPoints = 0;
   for (let i = 0; i < 5; i++) {
-    playRound(playerPlay(), computerPlay());
+    console.log("Round " + round);
+
+    let result = playRound(playerPlay(), computerPlay());
+    console.log(result);
+
+    if (result === "YOU WIN") {
+      playerPoints += 1;
+    }
+    if (result === "YOU LOSE") {
+      compPoints += 1;
+    }
+
+    console.log("player: " + playerPoints + " points");
+    console.log("computer: " + compPoints + " points");
+    round += 1;
+  }
+
+  if (playerPoints > compPoints) {
+    console.log("YOU WIN THE GAME!");
+  }
+  if (playerPoints < compPoints) {
+    console.log("YOU LOSE THE GAME!");
+  }
+  if (playerPoints === compPoints) {
+    console.log("YOU BOTH TIE!");
   }
 }
 
-console.log(game());
+game();
