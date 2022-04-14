@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      .show {
+        display: block;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Rocks Paper Scissors</title>
   </head>
   <body>
     <h1>Rocks Paper Scissors Game</h1>
+    <p>please choose ROCK, PAPER, or SCISSORS</p>
+    <button class="btn">ROCK</button>
+    <button class="btn">PAPER</button>
+    <button class="btn">SCISSORS</button>
+    <div id="result"></div>
+
+    <p>Player points: <span id="pp"></span></p>
+    <p>Computer points: <span id="cp"></span></p>
+    <p id="winnerp" class="hide">WINNER: <span id="winner"></span></p>
+
+    <button id="reset" class="hide">RESET</button>
   </body>
 </html>
